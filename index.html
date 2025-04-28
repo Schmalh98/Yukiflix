@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yukiflix - Streaming Inteligente</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #6a00f4, #0077ff);
+      color: #fff;
+      text-align: center;
+    }
+    .header img {
+      width: 150px;
+      height: 150px;
+      margin-top: 20px;
+    }
+    .highlight {
+      background-color: #00ff91;
+      color: black;
+      display: inline-block;
+      padding: 8px 15px;
+      margin: 15px 0;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+    .section {
+      background: rgba(0,0,0,0.2);
+      margin: 20px;
+      padding: 20px;
+      border-radius: 15px;
+    }
+    .timer {
+      font-size: 18px;
+      color: white;
+      background-color: orange;
+      padding: 8px 15px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .clients {
+      margin: 40px 20px;
+    }
+    .client-card {
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    .client-card img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    .client-text {
+      text-align: left;
+    }
+    .client-text strong {
+      font-size: 16px;
+    }
+    .stars {
+      color: gold;
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+    table {
+      width: 90%;
+      margin: 30px auto;
+      border-collapse: collapse;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #ccc;
+    }
+    th {
+      background-color: #00ff91;
+      color: black;
+    }
+    .total {
+      margin: 20px;
+      font-size: 20px;
+      color: #ff4b4b;
+      font-weight: bold;
+    }
+    .offer {
+      background-color: #00ff91;
+      color: black;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 15px;
+      border-radius: 25px;
+      display: inline-block;
+      margin: 20px 0;
+    }
+    .cta-button {
+      background-color: red;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 15px;
+      border-radius: 30px;
+      text-decoration: none;
+      display: inline-block;
+      margin: 20px 0;
+    }
+    .guarantee {
+      background: rgba(255, 255, 255, 0.1);
+      margin: 30px 20px;
+      padding: 20px;
+      border-radius: 15px;
+      font-size: 14px;
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .whatsapp-button img {
+      width: 30px;
+      height: 30px;
+    }
+    footer {
+      font-size: 12px;
+      margin: 40px 0 20px;
+      color: rgba(255,255,255,0.7);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <img src="mascote.png" alt="Mascote Yukiflix">
+  </div>
+
+  <h1>Cansado de pagar caro por vários streamings?</h1>
+
+  <div class="highlight">+4.200 pessoas já assistindo!</div>
+
+  <div class="section">
+    <h2>Chega de contratos complicados!</h2>
+    <p>Com a Yukiflix você desbloqueia filmes, séries, animes, canais ao vivo e esportes por apenas R$ 29,90/mês!</p>
+    <div class="timer">Oferta expira em: 14:44</div>
+  </div>
+
+  <h2>Veja o quanto você economiza:</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>PLATAFORMA</th>
+        <th>PREÇO</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Netflix</td><td>R$ 55,90</td></tr>
+      <tr><td>Disney+</td><td>R$ 33,90</td></tr>
+      <tr><td>Prime Video</td><td>R$ 19,90</td></tr>
+      <tr><td>HBO Max</td><td>R$ 34,90</td></tr>
+      <tr><td>Star+</td><td>R$ 32,90</td></tr>
+      <tr><td>Paramount+</td><td>R$ 19,90</td></tr>
+      <tr><td>Apple TV+</td><td>R$ 14,90</td></tr>
+      <tr><td>Globoplay</td><td>R$ 24,90</td></tr>
+    </tbody>
+  </table>
+
+  <div class="total">Total: R$ 237,20/mês</div>
+
+  <div class="offer">Yukiflix: Apenas R$ 29,90/mês!</div>
+
+  <a class="cta-button" href="https://wa.me/556392244049" target="_blank">QUERO ECONOMIZAR AGORA!</a>
+
+  <h2>O que dizem nossos clientes:</h2>
+
+  <div class="clients">
+    <div class="client-card">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana Souza">
+      <div class="client-text">
+        <div class="stars">★★★★★</div>
+        <strong>Ana Souza</strong><br>
+        Excelente! Atendimento rápido e plataforma completa. +120 avaliações
+      </div>
+    </div>
+
+    <div class="client-card">
+      <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Carlos Mendes">
+      <div class="client-text">
+        <div class="stars">★★★★★</div>
+        <strong>Carlos Mendes</strong><br>
+        Muito fácil de usar e economizei muito! +120 avaliações
+      </div>
+    </div>
+
+    <div class="client-card">
+      <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Juliana Paiva">
+      <div class="client-text">
+        <div class="stars">★★★★★</div>
+        <strong>Juliana Paiva</strong><br>
+        Vale a pena! Estou adorando! +120 avaliações
+      </div>
+    </div>
+
+    <div class="client-card">
+      <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Fernanda Lima">
+      <div class="client-text">
+        <div class="stars">★★★★★</div>
+        <strong>Fernanda Lima</strong><br>
+        Muito bom! Recomendo! +120 avaliações
+      </div>
+    </div>
+
+    <div class="client-card">
+      <img src="https://randomuser.me/api/portraits/men/80.jpg" alt="Lucas Torres">
+      <div class="client-text">
+        <div class="stars">★★★★★</div>
+        <strong>Lucas Torres</strong><br>
+        Top demais, super recomendo! +120 avaliações
+      </div>
+    </div>
+  </div>
+
+  <div class="guarantee">
+    <strong>Garantia de Satisfação:</strong> Teste Yukiflix por 7 dias! Se não gostar, devolvemos seu dinheiro!
+  </div>
+
+  <footer>
+    © 2025 Yukiflix - Todos os direitos reservados.
+  </footer>
+
+  <a class="whatsapp-button" href="https://wa.me/556392244049" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
+</body>
+</html>
