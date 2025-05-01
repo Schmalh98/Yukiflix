@@ -1,249 +1,73 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yukiflix - Streaming Inteligente</title>
-<style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(180deg, #6a00f4, #0077ff);
-    color: #fff;
-    text-align: center;
-  }
-  .header img {
-    width: 150px;
-    height: 150px;
-    margin-top: 20px;
-  }
-  .highlight {
-    background-color: #00ff91;
-    color: black;
-    display: inline-block;
-    padding: 8px 15px;
-    margin: 15px 0;
-    border-radius: 20px;
-    font-weight: bold;
-  }
-  .section {
-    background: rgba(0,0,0,0.2);
-    margin: 20px;
-    padding: 20px;
-    border-radius: 15px;
-  }
-  .timer {
-    font-size: 20px;
-    color: black;
-    background: orange;
-    padding: 8px 20px;
-    border-radius: 20px;
-    display: inline-block;
-    margin-top: 10px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  .clients {
-    margin: 40px 20px;
-  }
-  .client-card {
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 10px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  }
-  .client-card img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-right: 15px;
-  }
-  .client-text {
-    text-align: left;
-  }
-  .client-text strong {
-    font-size: 16px;
-  }
-  .stars {
-    color: gold;
-    margin-bottom: 5px;
-    font-size: 18px;
-  }
-  table {
-    width: 90%;
-    margin: 30px auto;
-    border-collapse: collapse;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  th, td {
-    padding: 12px;
-    border-bottom: 1px solid #ccc;
-  }
-  th {
-    background-color: #00ff91;
-    color: black;
-  }
-  .total {
-    margin: 20px;
-    font-size: 20px;
-    color: #ff4b4b;
-    font-weight: bold;
-  }
-  .offer {
-    background-color: #00ff91;
-    color: black;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 15px;
-    border-radius: 25px;
-    display: inline-block;
-    margin: 20px 0;
-    cursor: pointer;
-  }
-  .cta-button {
-    background-color: red;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 15px;
-    border-radius: 30px;
-    text-decoration: none;
-    display: inline-block;
-    margin: 20px 0;
-  }
-  .guarantee {
-    background: rgba(255, 255, 255, 0.1);
-    margin: 30px 20px;
-    padding: 20px;
-    border-radius: 15px;
-    font-size: 14px;
-  }
-  .whatsapp-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-  }
-  .whatsapp-button img {
-    width: 30px;
-    height: 30px;
-  }
-  footer {
-    font-size: 12px;
-    margin: 40px 0 20px;
-    color: rgba(255,255,255,0.7);
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seja um Revendedor Yukiflix</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 400px;
+      width: 100%;
+      background: #111;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #e50914;
+      color: #fff;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #c40812;
+    }
+  </style>
 </head>
-<body><div class="header">
-  <img src="mascote.png" alt="Mascote Yukiflix">
-</div><h1>Chegou a nova forma de assistir tudo!</h1>
-<div class="highlight">+4.200 pessoas já aproveitando!</div><div class="section">
-  <h2>Libere seu acesso em minutos!</h2>
-  <p>Com a Yukiflix, você desbloqueia filmes, séries, canais de TV e muito mais com facilidade!</p>
-  <div id="timer" class="timer" onclick="window.location.href='https://wa.me/556392244049';"></div>
-</div><h2>Veja o quanto você economiza:</h2><table>
-<thead>
-<tr>
-<th>PLATAFORMA</th>
-<th>PREÇO</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Netflix</td><td>R$ 55,90</td></tr>
-<tr><td>Disney+</td><td>R$ 33,90</td></tr>
-<tr><td>Prime Video</td><td>R$ 19,90</td></tr>
-<tr><td>HBO Max</td><td>R$ 34,90</td></tr>
-<tr><td>Star+</td><td>R$ 32,90</td></tr>
-<tr><td>Paramount+</td><td>R$ 19,90</td></tr>
-<tr><td>Apple TV+</td><td>R$ 14,90</td></tr>
-<tr><td>Globoplay</td><td>R$ 24,90</td></tr>
-</tbody>
-</table><div class="total">Total: R$ 237,20/mês</div>
-<div class="offer" onclick="window.location.href='https://wa.me/556392244049';">Yukiflix: Apenas R$ 29,90/mês!</div><a class="cta-button" href="https://wa.me/556392244049" target="_blank">QUERO ECONOMIZAR AGORA!</a>
+<body>
+  <div class="container">
+    <h1>Quer revender Yukiflix?</h1>
+    <p style="text-align:center; margin-bottom:20px;">Preencha abaixo para ser chamado no WhatsApp!</p>
+    <form id="leadForm">
+      <input type="text" id="nome" placeholder="Nome completo" required>
+      <input type="email" id="email" placeholder="Seu e-mail" required>
+      <input type="tel" id="telefone" placeholder="WhatsApp com DDD" required>
+      <button type="submit">Quero ser revendedor</button>
+    </form>
+  </div>  <script>
+    document.getElementById('leadForm').addEventListener('submit', function(e) {
+      e.preventDefault();
 
-<h2>O que dizem nossos clientes:</h2>
-<div class="clients">
-  <div class="client-card">
-    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ana Souza">
-    <div class="client-text">
-      <div class="stars">★★★★★</div>
-      <strong>Ana Souza</strong><br>
-      "Amei a variedade de filmes! Recomendo."
-    </div>
-  </div>
-  <div class="client-card">
-    <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Carlos Mendes">
-    <div class="client-text">
-      <div class="stars">★★★★★</div>
-      <strong>Carlos Mendes</strong><br>
-      "Perfeito pra assistir futebol ao vivo!"
-    </div>
-  </div>
-  <div class="client-card">
-    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Juliana Paiva">
-    <div class="client-text">
-      <div class="stars">★★★★★</div>
-      <strong>Juliana Paiva</strong><br>
-      "Estou economizando muito! Vale cada centavo."
-    </div>
-  </div>
-  <div class="client-card">
-    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Fernanda Lima">
-    <div class="client-text">
-      <div class="stars">★★★★★</div>
-      <strong>Fernanda Lima</strong><br>
-      "Super fácil de usar, recomendo!"
-    </div>
-  </div>
-  <div class="client-card">
-    <img src="https://randomuser.me/api/portraits/men/80.jpg" alt="Lucas Torres">
-    <div class="client-text">
-      <div class="stars">★★★★★</div>
-      <strong>Lucas Torres</strong><br>
-      "Melhor plataforma que já usei."
-    </div>
-  </div>
-</div><div class="guarantee">
-  <strong>Garantia de Satisfação:</strong> Teste Yukiflix por 7 dias! Se não gostar, devolvemos seu dinheiro!
-</div><footer>
-  © 2025 Yukiflix - Todos os direitos reservados.
-</footer><a class="whatsapp-button" href="https://wa.me/556392244049" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-</a><script>
-  function startCountdown(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-      minutes = parseInt(timer / 60, 10);
-      seconds = parseInt(timer % 60, 10);
+      const nome = document.getElementById('nome').value;
+      const email = document.getElementById('email').value;
+      const telefone = document.getElementById('telefone').value;
 
-      minutes = minutes < 10 ? "0" + minutes : minutes;
-      seconds = seconds < 10 ? "0" + seconds : seconds;
-
-      display.textContent = "Oferta expira em: " + minutes + ":" + seconds;
-
-      if (--timer < 0) {
-        timer = duration; // Reinicia se acabar
-      }
-    }, 1000);
-  }
-
-  window.onload = function () {
-    var fiveMinutes = 60 * 5,
-    display = document.getElementById('timer');
-    startCountdown(fiveMinutes, display);
-  };
-</script></body>
+      const msg = encodeURIComponent(`Olá, me chamo ${nome} e quero ser revendedor Yukiflix!\nEmail: ${email}\nWhatsApp: ${telefone}`);
+      window.location.href = `https://wa.me/55SEUNUMERO?text=${msg}`;
+    });
+  </script></body>
 </html>
