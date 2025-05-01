@@ -1,31 +1,29 @@
-<!DOCTYPE html><html lang="pt-br">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seja um Revendedor Yukiflix</title>
+  <title>Quero Revender Yukiflix</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #000;
+      background: #111;
       color: #fff;
+      margin: 0;
+      padding: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 20px;
     }
     .container {
-      max-width: 400px;
+      margin-top: 50px;
+      max-width: 500px;
       width: 100%;
-      background: #111;
-      border-radius: 8px;
       padding: 20px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+      background: #222;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
     }
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    input {
+    input, button {
       width: 100%;
       padding: 12px;
       margin: 10px 0;
@@ -33,41 +31,45 @@
       border-radius: 5px;
       font-size: 16px;
     }
-    button {
-      width: 100%;
-      padding: 14px;
-      background: #e50914;
+    input {
+      background: #333;
       color: #fff;
-      font-size: 18px;
-      border: none;
-      border-radius: 5px;
+    }
+    button {
+      background: #00c851;
+      color: white;
       cursor: pointer;
+      font-weight: bold;
     }
     button:hover {
-      background: #c40812;
+      background: #007e33;
+    }
+    h1 {
+      text-align: center;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Quer revender Yukiflix?</h1>
-    <p style="text-align:center; margin-bottom:20px;">Preencha abaixo para ser chamado no WhatsApp!</p>
-    <form id="leadForm">
+    <h1>Revenda Yukiflix</h1>
+    <form id="formulario">
       <input type="text" id="nome" placeholder="Nome completo" required>
-      <input type="email" id="email" placeholder="Seu e-mail" required>
+      <input type="email" id="email" placeholder="Seu melhor e-mail" required>
       <input type="tel" id="telefone" placeholder="WhatsApp com DDD" required>
-      <button type="submit">Quero ser revendedor</button>
+      <button type="submit">Quero revender</button>
     </form>
   </div>  <script>
-    document.getElementById('leadForm').addEventListener('submit', function(e) {
+    const form = document.getElementById('formulario');
+    form.addEventListener('submit', function(e) {
       e.preventDefault();
 
       const nome = document.getElementById('nome').value;
       const email = document.getElementById('email').value;
       const telefone = document.getElementById('telefone').value;
 
-      const msg = encodeURIComponent(`Olá, me chamo ${nome} e quero ser revendedor Yukiflix!\nEmail: ${email}\nWhatsApp: ${telefone}`);
-      window.location.href = `https://wa.me/55SEUNUMERO?text=${msg}`;
+      const mensagem = `Olá, me chamo ${nome}!%0AEmail: ${email}%0AWhatsApp: ${telefone}%0AQuero me tornar um revendedor da Yukiflix.`;
+
+      window.open(`https://wa.me/556392244049?text=${mensagem}`);
     });
   </script></body>
 </html>
