@@ -57,13 +57,24 @@
     .next-btn:hover, #submitBtn:hover {
       background-color: #00d1a3;
     }
+    .input-field {
+      margin: 10px 0;
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <img src="mascote.png" alt="Logo YukiFlix" class="logo">
-    <h1>Quer fazer parte da YukiFlix?</h1><form id="quizForm">
-  <div class="question active" id="question1">
+    <h1>Quer fazer parte da YukiFlix?</h1>
+    <form id="quizForm">
+      <input class="input-field" type="text" id="nome" placeholder="Seu nome completo" required>
+      <input class="input-field" type="email" id="email" placeholder="Seu e-mail" required>
+      <input class="input-field" type="tel" id="telefone" placeholder="Seu WhatsApp com DDD" required><div class="question active" id="question1">
     <p>1. Qual seu objetivo?</p>
     <label><input type="radio" name="q1" value="Renda extra" required> Renda extra</label>
     <label><input type="radio" name="q1" value="Trabalhar online"> Trabalhar online</label>
@@ -115,14 +126,17 @@
 
     document.getElementById('quizForm').addEventListener('submit', function(e) {
       e.preventDefault();
+      const nome = document.getElementById('nome').value;
+      const email = document.getElementById('email').value;
+      const telefone = document.getElementById('telefone').value;
       const q1 = document.querySelector('input[name="q1"]:checked').value;
       const q2 = document.querySelector('input[name="q2"]:checked').value;
       const q3 = document.querySelector('input[name="q3"]:checked').value;
       const q4 = document.querySelector('input[name="q4"]:checked').value;
       const q5 = document.querySelector('input[name="q5"]:checked').value;
 
-      const msg = `Olá, respondi o questionário da YukiFlix!%0A%0A1. Objetivo: ${q1}%0A2. Acesso à internet: ${q2}%0A3. Interesse na plataforma: ${q3}%0A4. Começar sem investimento: ${q4}%0A5. Receber detalhes: ${q5}`;
-      const whatsappURL = `https://wa.me/5591999999999?text=${msg}`;
+      const msg = `Olá, respondi o questionário da YukiFlix!%0A%0ANome: ${nome}%0AEmail: ${email}%0ATelefone: ${telefone}%0A%0A1. Objetivo: ${q1}%0A2. Acesso à internet: ${q2}%0A3. Interesse na plataforma: ${q3}%0A4. Começar sem investimento: ${q4}%0A5. Receber detalhes: ${q5}`;
+      const whatsappURL = `https://wa.me/556392244049?text=${msg}`;
       window.location.href = whatsappURL;
     });
   </script></body>
